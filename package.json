@@ -1,7 +1,7 @@
 {
   "name": "the-conductor",
-  "version": "0.0.1",
-  "description": "",
+  "version": "0.0.3",
+  "description": "An API Orchestration Layer (OL)",
   "main": "index.js",
   "author": "odino <alessandro.nadalin@gmail.com>",
   "license": "MIT",
