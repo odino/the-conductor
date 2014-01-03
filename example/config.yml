@@ -1,0 +1,12 @@
+resources:
+  whats_my_ip:
+    url:  "http://ip.jsontest.com/"
+  date:
+    url:  "http://date.jsontest.com/"
+facades:
+  or1:
+    strategy: join
+    format:   "text/plain"
+    resources:
+      - whats_my_ip
+      - date

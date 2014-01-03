@@ -1,0 +1,22 @@
+{
+  "name": "the-conductor",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "author": "odino <alessandro.nadalin@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+      "optimist": "~0.6",
+      "underscore": "~1.5",
+      "winston": "~0.7",
+      "underscore.string": "~2.0",
+      "odino.router": "*",
+      "js-yaml": "~3",
+      "async": "~0.2"
+  },
+  "devDependencies": {
+      "mocha": "~1.0",
+      "should": "~2.0",
+      "nodemon": "*"
+  }
+}
