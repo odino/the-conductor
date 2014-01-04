@@ -1,8 +1,8 @@
-![logo of the conductor](https://github.com/odino/the-conductor/blob/master/images/conductor.png?raw=true)
-
 [![NPM version](https://badge.fury.io/js/the-conductor.png)](http://badge.fury.io/js/odino.router)
 [![Build Status](https://travis-ci.org/odino/the-conductor.png?branch=master)](https://travis-ci.org/odino/the-conductor)
 [![Dependency Status](https://gemnasium.com/odino/the-conductor.png)](https://gemnasium.com/odino/the-conductor)
+
+![logo of the conductor](https://github.com/odino/the-conductor/blob/master/images/conductor.png?raw=true)
 
 ## Why?
 
