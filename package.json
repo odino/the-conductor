@@ -18,5 +18,8 @@
       "mocha": "~1.0",
       "should": "~2.0",
       "nodemon": "*"
+  },
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha"
   }
 }
