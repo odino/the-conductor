@@ -4,7 +4,7 @@ var http        = require('http');
 
 // add some routes
 conductor.router.routes.push({
-    pattern: "/example",
+    pattern: "/example.json",
     facade: "f1"
 });
 

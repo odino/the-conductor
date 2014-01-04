@@ -5,7 +5,7 @@ resources:
     url:  "http://date.jsontest.com/"
 facades:
   f1:
-    strategy: join
+    strategy: merge
     format:   "text/plain"
     resources:
       - whats_my_ip
