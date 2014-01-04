@@ -35,4 +35,4 @@ conductor.loadConfigFile('./example/config.yml');
 
 // inject the conductor in your webserver and let the orchestra play!
 http.createServer(conductor.run()).listen(conductor.port);
-console.log("server started on port " + conductor.port)
+console.log("server started on port " + conductor.port + " [" + conductor.mode + ']')

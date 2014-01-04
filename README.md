@@ -197,6 +197,28 @@ conductor.addFacadeStrategy('custom', function(response, resources, defaultHeade
 
 In this example, the `custom` facade strategy only returns the body of the first sub-response.
 
+## Debugging help
+
+If you start the conductor in **debug mode** (`-m debug`) you will get some additional informations everytime you hit
+an endpoint, such as a list of resources and the body of each resource the conductor hit in order to serve the response:
+
+```
+~  ᐅ curl -X GET -I http://127.0.0.1:6971/example.json
+
+HTTP/1.1 200 OK
+Content-Type: text/plain
+The-Conductor-Resource-ip.jsontest.com/: {"ip": "91.72.216.244"}
+The-Conductor-Resource-echo.jsontest.com/key/value/one/two: {"one": "two","key": "value"}
+The-Conductor-Resource-cookie.jsontest.com/: {"cookie_status": "Cookie set with name jsontestdotcom"}
+The-Conductor-Resource-headers.jsontest.com/: {"Host": "headers.jsontest.com","User-Agent": ""}
+The-Conductor-Resource-md5.jsontest.com/?text=sometext: {"md5": "a29e90948f4eee52168fab5fa9cfbcf8","original": "sometext"}
+The-Conductor-Resource-date.jsontest.com/: {"time": "03:16:35 PM","milliseconds_since_epoch": 1388848595956,"date": "01-04-2014"}
+The-Conductor-Resources: ip.jsontest.com/, echo.jsontest.com/key/value/one/two, cookie.jsontest.com/, headers.jsontest.com/, md5.jsontest.com/?text=sometext, date.jsontest.com/
+The-Conductor-Runtime: 566
+Connection: keep-alive
+Transfer-Encoding: chunked
+```
+
 ## Tests
 
 TBD
