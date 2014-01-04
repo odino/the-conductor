@@ -1,4 +1,4 @@
-# The Conductor
+![logo of the conductor](https://github.com/odino/the-conductor/blob/master/images/conductor.png?raw=true)
 
 ## Why?
 
@@ -152,6 +152,8 @@ facades:
       - user_detail
       - user_friends
 ```
+
+The `join` strategy can be omitted, as it's the default one.
 
 ## Custom facade strategies
 
