@@ -3,6 +3,14 @@ resources:
     url:  "http://ip.jsontest.com/"
   date:
     url:  "http://date.jsontest.com/"
+  headers:
+    url: "http://headers.jsontest.com/"
+  echo:
+    url: "http://echo.jsontest.com/key/value/one/two"
+  cookie:
+    url: "http://cookie.jsontest.com/"
+  md5:
+    url: "http://md5.jsontest.com/?text=sometext"
 facades:
   f1:
     strategy: merge
@@ -10,3 +18,7 @@ facades:
     resources:
       - whats_my_ip
       - date
+      - headers
+      - echo
+      - cookie
+      - md5

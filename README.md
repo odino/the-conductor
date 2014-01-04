@@ -44,6 +44,21 @@ to assemble its responses
 there (and a few other, minor, things, like how the conductor should assemble the responses from the sub-requests it
 makes)
 
+## Try it live!
+
+After you cloned the repository, run `npm install` and then run the example server:
+
+```
+node example/index.js
+```
+
+then hit `http://127.0.0.1:6971/example.json` and see it in action: you will see some JSON which is the result of
+[a bunch of HTTP calls](https://github.com/odino/the-conductor/blob/master/example/config.yml#L1):
+
+![example calls](https://github.com/odino/the-conductor/blob/master/images/example.png?raw=true)
+
+Have a look at the [example folder](https://github.com/odino/the-conductor/tree/master/example) in the source code.
+
 ## Usage
 
 Using the conductor it's a matter of a few lines of code:
@@ -181,12 +196,6 @@ conductor.addFacadeStrategy('custom', function(response, resources, defaultHeade
 ```
 
 In this example, the `custom` facade strategy only returns the body of the first sub-response.
-
-## Example
-
-Have a look at the [example folder](https://github.com/odino/the-conductor/tree/master/example) in the source code.
-
-You can also run the example with `node example/inde.js`.
 
 ## Tests
 
