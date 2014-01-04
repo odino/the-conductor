@@ -69,10 +69,11 @@ In order for our conductor to respond to a request hitting `http://example.org/w
 to add a new route (the router used by the conductor is [odino.router](https://npmjs.org/package/odino.router)):
 
 ```
-conductor.router.routes.push({
-    id:         'web_user_details',
-    pattern:    "/web/view/users/:username",
-    facade:     "user_detail"
+conductor.router.load({
+    example: {
+        pattern: "/example.json",
+        facade: "f1"
+    }
 });
 ```
 

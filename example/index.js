@@ -3,9 +3,11 @@ var conductor   = require('../lib/the-conductor');
 var http        = require('http');
 
 // add some routes
-conductor.router.routes.push({
-    pattern: "/example.json",
-    facade: "f1"
+conductor.router.load({
+    example: {
+        pattern: "/example.json",
+        facade: "f1"
+    }
 });
 
 // add resources and facades via plain JS
