@@ -225,4 +225,5 @@ Transfer-Encoding: chunked
 
 ## Tests
 
-TBD
+Tests are written with mocha and should.js: after you cloned the repo simply run `mocha` or its verbose cousin
+`./node_modules/mocha/bin/mocha` and everything should be green!

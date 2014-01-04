@@ -75,6 +75,64 @@ describe('the-conductor#run()', function () {
         });
     });
 
+    it('should merge resources if you use the merge facade strategy', function (done) {
+        var webserver = createServer(6792, function(req, res){
+            if (req.url == '/a') {
+                res.writeHead(200, {})
+                res.write('{"a":"a"}');
+                res.end();
+            } else {
+                res.writeHead(200, {})
+                res.write('{"b":"b"}');
+                res.end();
+            }
+        });
+
+        conductor.config = {
+            resources: {
+                a: {
+                    url: "http://localhost:6792/a"
+                },
+                b: {
+                    url: "http://localhost:6792/b"
+                }
+            },
+            facades: {
+                'test': {
+                    strategy: 'merge',
+                    resources: [
+                        'a',
+                        'b'
+                    ]
+                }
+            }
+        }
+
+        conductor.router.load({
+            test: {
+                pattern: "/test",
+                facade: "test"
+            }
+        });
+
+        var allRequestsCompleted = false;
+
+        http.get(host + '/test', function (res) {
+            var body = '';
+            res.statusCode.should.be.eql(200);
+            res.setEncoding('utf8');
+            res.on('data', function(chunk){
+                body += chunk;
+            });
+
+            res.on('end', function(){
+                body.should.be.eql('{"a":"a","b":"b"}');
+                webserver.close();
+                done();
+            });
+        });
+    });
+
     it('should join resources by default', function (done) {
         var webserver = createServer(6792, function(req, res){
             res.writeHead(200, {})
@@ -156,12 +214,10 @@ describe('the-conductor#run()', function () {
             }
         };
 
-        console.log(conductor.routes)
         http.get(host + '/hello/john', function (res) {
             res.statusCode.should.be.eql(200);
             res.setEncoding('utf8');
             res.on('data', function(chunk){
-
                 chunk.should.be.eql('/hello/john');
                 done();
             });
