@@ -140,6 +140,7 @@ A **facade strategy** is what the conductor runs to assemble the sub-responses i
 The conductor comes bundled with some very simple strategies:
 
 * **join**, which simply joins all the response bodies altogether
+* **merge**, which merges the responses (to be used with JSON responses)
 
 In order to specify which facade strategy to use for a particular facade, simply specify it in your config:
 

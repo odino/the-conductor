@@ -1,6 +1,6 @@
 {
   "name": "the-conductor",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "An API Orchestration Layer (OL)",
   "main": "index.js",
   "author": "odino <alessandro.nadalin@gmail.com>",

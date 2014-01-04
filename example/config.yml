@@ -4,7 +4,7 @@ resources:
   date:
     url:  "http://date.jsontest.com/"
 facades:
-  or1:
+  f1:
     strategy: join
     format:   "text/plain"
     resources:
