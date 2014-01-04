@@ -7,6 +7,10 @@ conductor.router.load({
     example: {
         pattern: "/example.json",
         facade: "f1"
+    },
+    greet: {
+        pattern: "/greet/:name",
+        facade: "greet"
     }
 });
 

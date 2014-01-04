@@ -11,10 +11,11 @@ resources:
     url: "http://cookie.jsontest.com/"
   md5:
     url: "http://md5.jsontest.com/?text=sometext"
+  greet:
+    url: "http://echo.jsontest.com/Hello/:name!"
 facades:
   f1:
     strategy: merge
-    format:   "text/plain"
     resources:
       - whats_my_ip
       - date
@@ -22,3 +23,6 @@ facades:
       - echo
       - cookie
       - md5
+  greet:
+    resources:
+      - greet
