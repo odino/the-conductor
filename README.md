@@ -172,8 +172,10 @@ facades:
 then register the strategy in the conductor:
 
 ```
-conductor.addFacadeStrategy('custom', function(resources){
-    return resources[0].response.body;
+conductor.addFacadeStrategy('custom', function(response, resources, defaultHeaders){
+    response.writeHead(200, defaultHeaders);
+    response.write(resources[0].response.body);
+    response.end();
 });
 ```
 
