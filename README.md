@@ -71,8 +71,8 @@ Using the conductor it's a matter of a few lines of code:
 var conductor   = require('the-conductor');
 var http        = require('http');
 
-http.createServer(conductor.run()).listen(conductor.port);
-console.log("server started on port " + conductor.port)
+http.createServer(conductor.run()).listen(conductor.getPort());
+console.log("server started on port " + conductor.getPort())
 ```
 
 and then you can simply run `node yourFile.js`: by default, the conductor will run on port `6971`, but you can override
@@ -102,24 +102,23 @@ to run the `user_detail` facade. But how do we define what the facade does?
 We can simply populate the `conductor.config` object with these informations:
 
 ```
-conductor.config = {
-    resources: {
-        user_details: {
-            url: "http://api.example.org/users/:username"
-        },
-        user_friends: {
-            url: "http://api.example.org/users/:username/friends"
-        }
+conductor.config.resources = {
+    user_details: {
+        url: "http://api.example.org/users/:username"
     },
-    facades: {
-        'web_user_details': {
-            resources: [
-                'user_details',
-                'user_friends'
-            ]
-        }
+    user_friends: {
+        url: "http://api.example.org/users/:username/friends"
     }
-}
+};
+
+conductor.config.facades = {
+    'web_user_details': {
+        resources: [
+            'user_details',
+            'user_friends'
+        ]
+    }
+};
 ```
 
 or, alternatively (recommended), dump the configuration in a more readable YML file and load it:
@@ -203,7 +202,7 @@ In this example, the `custom` facade strategy only returns the body of the first
 
 ## Debugging help
 
-If you start the conductor in **debug mode** (`-m debug`) you will get some additional informations everytime you hit
+If you start the conductor in **debug environment** (`--env dev` or  `-e debug`) you will get some additional informations everytime you hit
 an endpoint, such as a list of resources and the body of each resource the conductor hit in order to serve the response:
 
 ```

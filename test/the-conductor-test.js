@@ -13,7 +13,7 @@ conductor.router.load({
     }
 });
 
-var host = 'http://localhost:' + conductor.port;
+var host = 'http://localhost:' + conductor.getPort();
 var server;
 
 var createServer = function(port, onRequest){
@@ -25,7 +25,21 @@ var createServer = function(port, onRequest){
 
 describe('the-conductor#run()', function () {
     before(function () {
-        server = createServer(conductor.port, conductor.run());
+        server = createServer(conductor.getPort(), conductor.run());
+    });
+
+    it('getPort() should return you the port conductor is running on', function (done) {
+        conductor.getPort().should.be.eql('6971');
+        conductor.config.port = 6972;
+        conductor.getPort().should.be.eql('6972');
+        done();
+    });
+
+    it('getEnvironment() should return you the environment used by conductor', function (done) {
+        conductor.getEnvironment().should.be.eql('prod');
+        conductor.config.environment = 'debug';
+        conductor.getEnvironment().should.be.eql('debug');
+        done();
     });
 
     it('should return 404 on a non-existing route', function (done) {
