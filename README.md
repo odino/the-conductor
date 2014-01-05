@@ -202,8 +202,9 @@ In this example, the `custom` facade strategy only returns the body of the first
 
 ## Debugging help
 
-If you start the conductor in **debug environment** (`--env dev` or  `-e debug`) you will get some additional informations everytime you hit
-an endpoint, such as a list of resources and the body of each resource the conductor hit in order to serve the response:
+If you start the conductor in **dev environment** (`--env dev` or  `-e dev`) you will get some additional informations
+everytime you hit an endpoint, such as a list of resources and the body of each resource the conductor hit in order to
+serve the response:
 
 ```
 ~  ᐅ curl -X GET -I http://127.0.0.1:6971/example.json
