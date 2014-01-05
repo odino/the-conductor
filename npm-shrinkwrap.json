@@ -1,50 +1,46 @@
 {
   "name": "the-conductor",
-  "version": "0.0.5",
+  "version": "0.2.0",
   "dependencies": {
     "optimist": {
       "version": "0.6.0",
-      "from": "optimist@~0.6",
+      "from": "optimist@0.6.0",
       "dependencies": {
         "wordwrap": {
           "version": "0.0.2",
-          "from": "wordwrap@~0.0.2"
+          "from": "wordwrap@0.0.2"
         },
         "minimist": {
           "version": "0.0.5",
-          "from": "minimist@~0.0.1"
+          "from": "minimist@0.0.5"
         }
       }
     },
     "underscore": {
       "version": "1.5.2",
-      "from": "underscore@~1.5"
+      "from": "underscore@1.5.2"
     },
     "winston": {
       "version": "0.7.2",
-      "from": "winston@~0.7",
+      "from": "https://registry.npmjs.org/winston/-/winston-0.7.2.tgz",
       "resolved": "https://registry.npmjs.org/winston/-/winston-0.7.2.tgz",
       "dependencies": {
-        "async": {
-          "version": "0.2.9",
-          "from": "async@0.2.x"
-        },
         "colors": {
           "version": "0.6.2",
-          "from": "colors@0.6.x"
+          "from": "colors@0.6.2"
         },
         "cycle": {
           "version": "1.0.3",
-          "from": "cycle@1.0.x",
+          "from": "https://registry.npmjs.org/cycle/-/cycle-1.0.3.tgz",
           "resolved": "https://registry.npmjs.org/cycle/-/cycle-1.0.3.tgz"
         },
         "eyes": {
           "version": "0.1.8",
-          "from": "eyes@0.1.x"
+          "from": "eyes@0.1.8"
         },
         "pkginfo": {
           "version": "0.3.0",
-          "from": "pkginfo@0.3.x",
+          "from": "https://registry.npmjs.org/pkginfo/-/pkginfo-0.3.0.tgz",
           "resolved": "https://registry.npmjs.org/pkginfo/-/pkginfo-0.3.0.tgz"
         },
         "request": {
@@ -64,6 +60,10 @@
                       "from": "delayed-stream@0.0.5"
                     }
                   }
+                },
+                "async": {
+                  "version": "0.2.9",
+                  "from": "async@~0.2.9"
                 }
               }
             },
@@ -129,7 +129,7 @@
         },
         "stack-trace": {
           "version": "0.0.7",
-          "from": "stack-trace@0.0.x",
+          "from": "https://registry.npmjs.org/stack-trace/-/stack-trace-0.0.7.tgz",
           "resolved": "https://registry.npmjs.org/stack-trace/-/stack-trace-0.0.7.tgz"
         }
       }
@@ -140,38 +140,48 @@
     },
     "odino.router": {
       "version": "0.1.0",
-      "from": "odino.router@0.1.0",
-      "resolved": "https://registry.npmjs.org/odino.router/-/odino.router-0.1.0.tgz"
+      "from": "https://registry.npmjs.org/odino.router/-/odino.router-0.1.0.tgz",
+      "resolved": "https://registry.npmjs.org/odino.router/-/odino.router-0.1.0.tgz",
+      "dependencies": {
+        "underscore.string": {
+          "version": "2.3.3",
+          "from": "underscore.string@2.3.3"
+        }
+      }
     },
     "js-yaml": {
       "version": "3.0.1",
-      "from": "js-yaml@~3",
+      "from": "https://registry.npmjs.org/js-yaml/-/js-yaml-3.0.1.tgz",
       "resolved": "https://registry.npmjs.org/js-yaml/-/js-yaml-3.0.1.tgz",
       "dependencies": {
         "argparse": {
           "version": "0.1.15",
-          "from": "argparse@~ 0.1.11",
+          "from": "argparse@0.1.15",
           "dependencies": {
             "underscore": {
               "version": "1.4.4",
-              "from": "underscore@1.4.4",
-              "resolved": "https://registry.npmjs.org/underscore/-/underscore-1.4.4.tgz"
+              "from": "underscore@1.4.4"
             },
             "underscore.string": {
               "version": "2.3.3",
-              "from": "underscore.string@~2.3.1"
+              "from": "underscore.string@2.3.3"
             }
           }
         },
         "esprima": {
           "version": "1.0.4",
-          "from": "esprima@~ 1.0.2"
+          "from": "esprima@1.0.4"
         }
       }
     },
     "async": {
       "version": "0.2.9",
-      "from": "async@~0.2"
+      "from": "async@0.2.9"
+    },
+    "http-https": {
+      "version": "1.0.0",
+      "from": "http-https@1.0.0",
+      "resolved": "https://registry.npmjs.org/http-https/-/http-https-1.0.0.tgz"
     }
   }
 }

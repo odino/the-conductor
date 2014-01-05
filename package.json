@@ -1,6 +1,6 @@
 {
     "name": "the-conductor",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "description": "An API Orchestration Layer (OL)",
     "homepage": "https://github.com/odino/the-conductor",
     "repository" : {
@@ -36,7 +36,8 @@
         "underscore.string": "~2.0",
         "odino.router": "*",
         "js-yaml": "~3",
-        "async": "~0.2"
+        "async": "~0.2",
+        "http-https": "~1.0"
     },
     "devDependencies": {
         "mocha": "~1.0",
