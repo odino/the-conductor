@@ -30,18 +30,18 @@
     },
     "license": "MIT",
     "dependencies": {
-        "optimist": "~0.6",
-        "underscore": "~1.5",
-        "winston": "~0.7",
-        "underscore.string": "~2.0",
+        "optimist": "*",
+        "underscore": "*",
+        "winston": "*",
+        "underscore.string": "*",
         "odino.router": "*",
-        "js-yaml": "~3",
-        "async": "~0.2",
-        "http-https": "~1.0"
+        "js-yaml": "*",
+        "async": "*",
+        "http-https": "*"
     },
     "devDependencies": {
-        "mocha": "~1.0",
-        "should": "~2.0",
+        "mocha": "*",
+        "should": "*",
         "nodemon": "*"
     },
     "scripts": {
