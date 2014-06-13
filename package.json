@@ -1,50 +1,50 @@
 {
-    "name": "the-conductor",
-    "version": "0.2.2",
-    "description": "An API Orchestration Layer (OL)",
-    "homepage": "https://github.com/odino/the-conductor",
-    "repository" : {
-        "type" : "git",
-        "url" : "http://github.com/odino/the-conductor.git"
-    },
-    "keywords": [
-        "api",
-        "apis",
-        "orchestration",
-        "layer",
-        "http",
-        "webserver",
-        "rest",
-        "odino",
-        "conductor",
-        "the-conductor"
-    ],
-    "main": "lib/the-conductor.js",
-    "author": {
-        "name": "Alessandro Nadalin",
-        "email": "alessandro.nadalin@gmail.com",
-        "url": "http://odino.org/"
-    },
-    "engines": {
-        "node": ">= 0.8.x"
-    },
-    "license": "MIT",
-    "dependencies": {
-        "optimist": "*",
-        "underscore": "*",
-        "winston": "*",
-        "underscore.string": "*",
-        "odino.router": "*",
-        "js-yaml": "*",
-        "async": "*",
-        "http-https": "*"
-    },
-    "devDependencies": {
-        "mocha": "*",
-        "should": "*",
-        "nodemon": "*"
-    },
-    "scripts": {
-        "test": "./node_modules/mocha/bin/mocha"
-    }
+  "name": "the-conductor",
+  "version": "0.3.0",
+  "description": "An API Orchestration Layer (OL)",
+  "homepage": "https://github.com/odino/the-conductor",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/odino/the-conductor.git"
+  },
+  "keywords": [
+    "api",
+    "apis",
+    "orchestration",
+    "layer",
+    "http",
+    "webserver",
+    "rest",
+    "odino",
+    "conductor",
+    "the-conductor"
+  ],
+  "main": "lib/the-conductor.js",
+  "author": {
+    "name": "Alessandro Nadalin",
+    "email": "alessandro.nadalin@gmail.com",
+    "url": "http://odino.org/"
+  },
+  "engines": {
+    "node": ">= 0.8.x"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "optimist": "*",
+    "underscore": "*",
+    "winston": "*",
+    "underscore.string": "*",
+    "odino.router": "*",
+    "js-yaml": "*",
+    "async": "*",
+    "http-https": "*"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*",
+    "nodemon": "*"
+  },
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha"
+  }
 }
