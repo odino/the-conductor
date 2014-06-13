@@ -67,7 +67,7 @@ Have a look at the [example folder](https://github.com/odino/the-conductor/tree/
 
 Using the conductor it's a matter of a few lines of code:
 
-```
+``` javascript
 var conductor   = require('the-conductor');
 var http        = require('http');
 
@@ -87,7 +87,7 @@ and configure them.
 In order for our conductor to respond to a request hitting `http://example.org/web/view/users/john`, for example, we simply need
 to add a new route (the router used by the conductor is [odino.router](https://npmjs.org/package/odino.router)):
 
-```
+``` javascript
 conductor.router.load({
     example: {
         pattern: "/example.json",
@@ -101,7 +101,7 @@ to run the `user_detail` facade. But how do we define what the facade does?
 
 We can simply populate the `conductor.config` object with these informations:
 
-```
+``` javascript
 conductor.config.resources = {
     user_details: {
         url: "http://api.example.org/users/:username"
@@ -123,13 +123,13 @@ conductor.config.facades = {
 
 or, alternatively (recommended), dump the configuration in a more readable YML file and load it:
 
-```
+``` javascript
 conductor.loadConfigFile('./path/to/your/config.yml');
 ```
 
 The YML would then look very simple:
 
-```
+``` yaml
 resources:
  user_detail:
     url:  "http://api.example.org/users/:username"
@@ -163,7 +163,7 @@ The conductor comes bundled with some very simple strategies:
 
 In order to specify which facade strategy to use for a particular facade, simply specify it in your config:
 
-```
+``` yaml
 facades:
   web_user_details:
     strategy: join
@@ -181,7 +181,7 @@ them inside the conductor.
 
 First, update your configuration:
 
-```
+``` yaml
 facades:
   web_user_details:
     strategy: custom
@@ -190,7 +190,7 @@ facades:
 
 then register the strategy in the conductor:
 
-```
+``` javascript
 conductor.addFacadeStrategy('custom', function(response, resources, defaultHeaders){
     response.writeHead(200, defaultHeaders);
     response.write(resources[0].response.body);
