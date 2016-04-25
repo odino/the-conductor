@@ -29,9 +29,9 @@ describe('the-conductor#run()', function () {
     });
 
     it('getPort() should return you the port conductor is running on', function (done) {
-        conductor.getPort().should.be.eql('6971');
+        conductor.getPort().should.be.eql(6971);
         conductor.config.port = 6972;
-        conductor.getPort().should.be.eql('6972');
+        conductor.getPort().should.be.eql(6972);
         done();
     });
 
