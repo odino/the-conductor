@@ -30,14 +30,13 @@
   },
   "license": "MIT",
   "dependencies": {
-    "optimist": "*",
-    "underscore": "*",
-    "winston": "*",
-    "underscore.string": "*",
-    "odino.router": "*",
-    "js-yaml": "*",
     "async": "*",
-    "http-https": "*"
+    "http-https": "*",
+    "js-yaml": "*",
+    "lodash": "^4.11.1",
+    "odino.router": "*",
+    "optimist": "*",
+    "winston": "^2.2.0"
   },
   "devDependencies": {
     "mocha": "*",
